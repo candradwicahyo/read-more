@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --default-font: 'Roboto';
+  --gray: #F4F7FE;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--default-font), sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--gray);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+  overflow: hidden;
+}
+
+.container .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container .content h1 {
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: royalblue;
+  margin-bottom: 10px;
+}
+
+.container .content p {
+  font-weight: 300;
+  line-height: 21px;
+  width: 70%;
+  font-size: 14px;
+}
+
+.container .wrapper-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .wrapper-container .wrapper {
+  width: 33.33%;
+  overflow: hidden;
+  margin: 0 5px;
+}
+
+.wrapper-container .wrapper .box {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.wrapper-container .wrapper .box .image-box {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: var(--gray);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.wrapper-container .wrapper .box h3 {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  color: royalblue;
+}
+
+.wrapper-container .wrapper .box p {
+  font-size: 14.5px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.wrapper-container .wrapper .box .button {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  padding: 0 30px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background: royalblue;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  overflow: hidden;
+  display: none;
+}
+
+.wrapper-container .wrapper .box .button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.2;
+  transition: 0.5s ease;
+}
+
+.wrapper-container .wrapper .box .button:hover::before {
+  left: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  
+  .container {
+    margin: 20px 0;
+  }
+  
+  .container .content p {
+    width: 90%;
+  }
+  
+  .container .wrapper-container {
+    flex-direction: column;
+  }
+  
+  .container .wrapper-container .wrapper {
+    width: 90%;
+    margin: 10px auto;
+  }
+  
+  .wrapper-container .wrapper .box p {
+    font-size: 13.8px;
+  }
+  
+}
